@@ -237,8 +237,8 @@ if ( ! class_exists( 'safe_svg' ) ) {
          */
         public function one_pixel_fix( $image, $attachment_id, $size, $icon ) {
             if ( get_post_mime_type( $attachment_id ) == 'image/svg+xml' ) {
-                $image['1'] = false;
-                $image['2'] = false;
+                $image['1'] = 100;
+                $image['2'] = 100;
             }
 
             return $image;
